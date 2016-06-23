@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                locationManager.requestLocationUpdates("gps", 5000, 5, listener);
+                locationManager.requestLocationUpdates("gps", 0, 5, listener);
             }
         });
     }

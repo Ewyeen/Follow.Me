@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Follow.Me!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_info">Info</string>
     <string name="introduction">Welcome!\n\nLet\'s test if it is everything alright with the location permission, try to get your device location pushing the underlying button: your coordinates should appears below after a few seconds.\n\nIf your GPS is disabled you will be redirected to your phone settings, just enable it and press back to return here.</string>
     <string name="locwannabe">Your Latitude and Longitude will appear here.</string>
+    <string name="button_getloc">Get Location</string>
 </resources>
