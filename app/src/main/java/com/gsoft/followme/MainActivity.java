@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textloc;
     private LocationManager locationManager;
     private LocationListener listener;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
 
         button = (Button) findViewById(R.id.buttongetloc);
         textloc = (TextView) findViewById(R.id.showloc);
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent aprimaps = new Intent(MainActivity.this, MapsActivity.class);
+                MainActivity.this.startActivity(aprimaps);
+
+            }
+        });
 
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
